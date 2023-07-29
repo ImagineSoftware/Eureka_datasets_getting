@@ -1,0 +1,5 @@
+venv
+test_data_mapping.csv
+train_data_mapping.csv
+validation_data_mapping.csv
+image_list_file.csv
