@@ -24,6 +24,7 @@ python3 create_image_list_file.py
 note: need to change file names in this file  `create_image_list_file.py`.
 
 need to run to downloader.py
+to save all images in data folder
 
 ```
 python3 downloader.py image_list_file.csv --download_folder=data

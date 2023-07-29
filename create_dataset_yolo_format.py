@@ -4,12 +4,12 @@ import shutil
 
 DATA_ALL_DIR = os.path.join('.', 'data')
 
-DATA_OUT_DIR = os.path.join('.', 'data_set')
+DATA_OUT_DIR = os.path.join('.', 'data_set/eureka')
 
-for set_ in ['train', 'validation', 'test']:
+for set_ in ['train/eureka', 'validation/eureka', 'test/eureka']:
     for dir_ in [os.path.join(DATA_OUT_DIR, set_),
-                 os.path.join(DATA_OUT_DIR, set_, 'imgs'),
-                 os.path.join(DATA_OUT_DIR, set_, 'anns')]:
+                 os.path.join(DATA_OUT_DIR, set_, 'images'),
+                 os.path.join(DATA_OUT_DIR, set_, 'labels')]:
         if os.path.exists(dir_):
             shutil.rmtree(dir_)
         os.mkdir(dir_)
@@ -29,10 +29,10 @@ for j, filename in enumerate([train_bboxes_filename, validation_bboxes_filename,
         while len(line) != 0:
             id, _, class_name, _, x1, x2, y1, y2, _, _, _, _, _ = line.split(',')[:13]
             if class_name in [alpaca_id]:
-                if not os.path.exists(os.path.join(DATA_OUT_DIR, set_, 'imgs', '{}.jpg'.format(id))):
+                if not os.path.exists(os.path.join(DATA_OUT_DIR, set_, 'eureka/images', '{}.jpg'.format(id))):
                     shutil.copy(os.path.join(DATA_ALL_DIR, '{}.jpg'.format(id)),
-                                os.path.join(DATA_OUT_DIR, set_, 'imgs', '{}.jpg'.format(id)))
-                with open(os.path.join(DATA_OUT_DIR, set_, 'anns', '{}.txt'.format(id)), 'a') as f_ann:
+                                os.path.join(DATA_OUT_DIR, set_, 'eureka/images', '{}.jpg'.format(id)))
+                with open(os.path.join(DATA_OUT_DIR, set_, 'eureka/labels', '{}.txt'.format(id)), 'a') as f_ann:
                     # class_id, xc, yx, w, h
                     x1, x2, y1, y2 = [float(j) for j in [x1, x2, y1, y2]]
                     xc = (x1 + x2) / 2
