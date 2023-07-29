@@ -23,15 +23,14 @@ python3 create_image_list_file.py
 
 note: need to change file names in this file  `create_image_list_file.py`.
 
+need to run to downloader.py
+
+```
+python3 downloader.py image_list_file.csv --download_folder=data
+```
 
 then we need to run
 
 ```
 python3 create_dataset_yolo_format.py
-```
-
-need to run to downloader.py
-
-```
-python downloader.py $IMAGE_LIST_FILE --download_folder=$DOWNLOAD_FOLDER
 ```

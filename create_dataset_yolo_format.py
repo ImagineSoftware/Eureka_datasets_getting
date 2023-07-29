@@ -2,9 +2,9 @@ import os
 import shutil
 
 
-DATA_ALL_DIR = os.path.join('.', 'data_set')
+DATA_ALL_DIR = os.path.join('.', 'data')
 
-DATA_OUT_DIR = os.path.join('.', 'data')
+DATA_OUT_DIR = os.path.join('.', 'data_set')
 
 for set_ in ['train', 'validation', 'test']:
     for dir_ in [os.path.join(DATA_OUT_DIR, set_),
@@ -16,9 +16,9 @@ for set_ in ['train', 'validation', 'test']:
 
 alpaca_id = '/m/0pcr'
 
-train_bboxes_filename = os.path.join('.', 'test-annotations-bbox.csv')
-validation_bboxes_filename = os.path.join('.', 'test-annotations-bbox.csv')
-test_bboxes_filename = os.path.join('.', 'test-annotations-bbox.csv')
+train_bboxes_filename = os.path.join('.', 'train_data_mapping.csv')
+validation_bboxes_filename = os.path.join('.', 'validation_data_mapping.csv')
+test_bboxes_filename = os.path.join('.', 'test_data_mapping.csv')
 
 
 for j, filename in enumerate([train_bboxes_filename, validation_bboxes_filename, test_bboxes_filename]):
