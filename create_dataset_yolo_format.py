@@ -14,7 +14,7 @@ for set_ in ['train/eureka', 'validation/eureka', 'test/eureka']:
             shutil.rmtree(dir_)
         os.mkdir(dir_)
 
-data_set_ids = ['/m/02gsv','/m/0h8nh56','/m/06txfd','/m/0hgr9cc','/m/01b7fy', '/m/09rvlp4','/m/027lnzs','/m/0mcx2','/m/0hg7b','/m/02psk3p','/m/025xf_8','/m/030swj','/m/02x_6w','/m/050k8','/m/03nsht8','/m/0h8k552', '/m/0hgs8xl','/m/0h8kx8s','/m/0h8k5mc','/m/0169zh','/m/07cx4','/m/066zr','/m/024j5d', '/m/0c9sm1','/m/0n5v01m', '/m/0f828h', '/m/0h8mw0p', '/m/0hgryjx','/m/01sdgj', ' /m/03wcykg' ,'/m/06tlg8','/m/0h8jj5_','/m/02635ct','/m/0cw2yv','/m/02zsn','/m/0dzct']
+data_set_ids = ['/m/02gsv','/m/0h8nh56','/m/06txfd','/m/0hgr9cc','/m/01b7fy', '/m/09rvlp4','/m/027lnzs','/m/0mcx2','/m/0hg7b','/m/02psk3p','/m/025xf_8','/m/030swj','/m/02x_6w','/m/050k8','/m/03nsht8','/m/0h8k552', '/m/0hgs8xl','/m/0h8kx8s','/m/0h8k5mc','/m/0169zh','/m/07cx4','/m/066zr','/m/024j5d', '/m/0c9sm1','/m/0n5v01m', '/m/0f828h', '/m/0h8mw0p', '/m/0hgryjx','/m/01sdgj', ' /m/03wcykg' ,'/m/06tlg8','/m/0h8jj5_','/m/02635ct']
 
 # /m/02gsv -> Diary
 # '/m/0h8nh56' -> Conference phone
